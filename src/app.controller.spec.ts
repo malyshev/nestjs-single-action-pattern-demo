@@ -15,7 +15,7 @@ describe('AppController', () => {
   describe('root', () => {
     it('should return comprehensive project information as HTML', () => {
       const result = appController.getProjectInfo();
-      
+
       expect(typeof result).toBe('string');
       expect(result).toContain('NestJS Single Action Pattern Demo');
       expect(result).toContain('Version 0.0.1');
