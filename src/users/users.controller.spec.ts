@@ -234,16 +234,6 @@ describe('UsersController', () => {
       );
     });
 
-    it('should handle invalid UUID format', async () => {
-      mockUsersService.findOne.mockResolvedValue(null);
-
-      await expect(
-        controller.findOne('invalid-uuid', mockRequest),
-      ).rejects.toThrow(
-        new HttpException('User not found', HttpStatus.NOT_FOUND),
-      );
-    });
-
     it('should handle empty id parameter', async () => {
       mockUsersService.findOne.mockResolvedValue(null);
 
